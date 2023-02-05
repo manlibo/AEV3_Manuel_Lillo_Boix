@@ -81,6 +81,7 @@ class PedidosController extends AbstractController
                 'Tipo' => $value2->getTipo()
 
             ];
+        }
         $lineaspedidos = array();
         $detail2 = $pedido->getLineaspedidos();
         foreach ($detail2 as $key => $value) {
@@ -89,7 +90,7 @@ class PedidosController extends AbstractController
                     'Precio' => $value->getPrecio(),
             ];
         }
-        }
+        
         $data = [
             'PEDIDO' => $pedido->getId(),
             'Tipo' => $pedido->getTipo(),

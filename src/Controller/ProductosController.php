@@ -82,6 +82,7 @@ class ProductosController extends AbstractController
             }
             $data = [
                 'descripcion' => $producto->getDescripcion(),
+                'almacen' => $producto->getIdAlmacen()->getNombre(),
                 'unidad' => $producto->getUnidad(),
                 'clasificacion' => $producto->getClasificacion(),
                 'preciounidad' => $producto->getPreciounidad(),
